@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mehrere Submit-Schaltflächen</title>
+</head>
+<body>
+    <h1>Mehrere Submit-Schaltflächen</h1>
+<form>
+  <label>Nachrichten erhalten: </label>
+  <input type="email" name="mail" required>
+  <input type="submit" value="zu HTML"
+   formaction="/scripts/subscribe-html.php"
+   formmethod="post">
+  <input type="submit" value="zu CSS"
+   formaction="/scripts/subscribe-css.php"
+   formmethod="post">
+</form>
+</body>
+</html>

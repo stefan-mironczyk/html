@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <title>Textauszeichnungen</title>
+    <meta charset="UTF-8">
+    <style>
+        header {
+            background: snow;
+            border: 1px dashed black;
+            padding: 10px
+        }
+        
+        footer {
+            background: snow;
+            border: 1px dashed black;
+            padding: 10px;
+        }
+        
+        article {
+            padding-left: 25px;
+            padding-right: 25px;
+            text-align: justify;
+        }
+        
+        kbd {
+            font-weight: bold;
+        }
+        
+        samp {
+            color: grey;
+        }
+        
+        u.spell-checker {
+            text-decoration: none;
+            border-bottom: 1px dashed red;
+        }
+        /* q {quotes: '»' '«' '›' '‹';} */
+        /*
+      q:before {content: '»'; content: open-quote;}
+      q:after {content: '«'; content: close-quote;}
+      q q:before {content: '›'; content: open-quote;}
+      q q:after {content: '‹'; content: close-quote;}
+      */
+        
+        time {
+            border-bottom: 1px dotted blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Textauszeichnungen</h1>
+        <p>Demonstriert verschiedene Textauszeichnungen</p>
+    </header>
+    <main>
+        <article>
+            <h2>Abkürzungen mit abbr</h2>
+            <p>Das <abbr title="World Wide Web">WWW</abbr> ist voller Abkürzungen.</p>
+        </article>
+        <article>
+            <h2>Arbeitstitel mit cite</h2>
+            <p>Gemäß dem Buch <cite>HTML und CSS - Das umfassende Handbuch</cite> heißt es:</p>
+            <blockquote>In HTML 4.01 wurde dieses Element auch für kurze Zitate verwendet. In neuem HTML wurde die semantische Bedeutung umfunktioniert und sollte jetzt nur noch für Arbeitstitel verwendet werden.</blockquote>
+        </article>
+        <article>
+            <h2>Computercode mit <code>code</code></h2>
+            <p>Das Element <code>code</code> enthält keine Attribute.</p>
+        </article>
+        <article>
+            <h2>Ein präformatierter Text mir pre</h2>
+            <p>Hier ein Quellcodeausschnitt eines C-Programms:</p>
+            <figure>
+                <pre><code>#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    puts("Hallo Welt!");
+    return 0;
+}</code></pre>
+                <figcaption>Listing 1: Hallo Welt in C</figcaption>
+            </figure>
+        </article>
+
+        <article>
+            <h2>Tastatureingabe mit kdb und Programmausgabe mit samp</h2>
+            <p>Mit <kbd>Strg</kbd> + <kbd>A</kbd> markieren Sie den kompletten Text.</p>
+            <pre>term#1&gt; <kbd>gcc -o Wall hallo hallo.c</kbd>
+term#1&gt; <kbd>./hallo</kbd>
+<samp>Hallo Welt!</samp>
+term#1&gt;</pre>
+        </article>
+        <article>
+            <h2>Definition/Term mit dfn</h2>
+            <p>Ein <dfn>Smartphone</dfn> hat im Gegensatz zu einem Mobiltelefon (ugs. auch Handy) mehr Computerfunktionalität- und -konnektivität.</p>
+        </article>
+        <article>
+            <h2>Variablen mit var</h2>
+            <p>Der Radius <var>r</var> entspricht dem halben Durchmesser <var>d</var>.</p>
+        </article>
+        <article>
+            <h2>Textrichtung ändern mit bdo und bdi</h2>
+            <p><bdo dir="rtl">Ein Esel lese nie</bdo></p>
+            <p>שלום</p>
+            <p><bdi>السلام عليكم</bdi>: 1 (as-salaam alaykum)</p>
+            <p><bdi>שלום</bdi>: 2 (shalom)</p>
+            <p>Howdy: 3 (ein Gruß in den US-Südstaaten)</p>
+        </article>
+        <article>
+            <h2>Text betonen bzw. hervorheben (em, strong, b und i)</h2>
+            <p><em>Bär</em>! Wer zum Teufel ist dieser <em>Bär</em>!</p>
+            <p><strong>Achtung!</strong> <em>Bär</em> könnte hinter dir stehen!</p>
+            <p><strong>Abgabetermin im <strong><em>Sommer 2022</em></strong></strong>
+            </p>
+        </article>
+        <article>
+            <h2>Text markieren mit mark</h2>
+            <p>Im Jahr 2021 haben sich die Gewinne um <mark>100 Prozent</mark> erhöht.</p>
+            <p>Hier ein Quellcodeausschnitt eines C-Programms:</p>
+            <pre><code>#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+    <mark>puts("Hallo Welt!");</mark>
+    return 0;
+}</code></pre>
+        </article>
+        <article>
+            <h2>Fließtext zitieren mit q</h2>
+            <p>Wolf fragte: <q cite="http://dieter-baer.de/"><em>Bär</em>! Wer zum Teufel ist dieser <em>Bär</em>!</q></p>
+            <p>Fuchs antwortete: <q>Achtung! <q><em>Bär</em></q> könnte hinter dir stehen!</q>
+            </p>
+        </article>
+        <article>
+            <h2>Text unter- bzw. durchstreichen mit s und u</h2>
+            <p>Einen Text in die Mitte setzen können Sie mit <s><code>&lt;center&gt;</code> oder</s> der CSS-Eigenschaft <code>text-align</code> und dem Wert <var>center</var>.</p>
+            <p>我来自<u>德国</u>。= Ich komme aus Deutschland.</p>
+            <p>Auch <u class="spell-checker">Rechtschreibfeler</u> können damit markiert werden.</p>
+        </article>
+        <article>
+            <h2>Änderungen markieren mit del und ins</h2>
+            <del><p>Der Sänger tritt am 01.01.2021 im Konzertsaal auf!</p></del>
+            <ins><p>Das Konzert findet nicht statt, da der Sänger erkrankt ist!</p></ins>
+        </article>
+        <article>
+            <h2>Hoch- bzw. Tiefstellen mit sub und sup</h2>
+            <p><sup>[1]</sup> Reaktionsschema: 2 H<sub>2</sub>O &RightArrow; 2 H<sub>2</sub> + O<sub>2</sub></p>
+            <p><sup>[2]</sup> Kreisfläche berechnen: A = &pi; * r<sup>2</sup></p>
+            <p><sub>[1] = http://de.wikipedia.org/wiki/Wasser</sub><br>
+                <sub>[2] = http://de.wikipedia.org/wiki/Kreis</sub></p>
+        </article>
+        <article>
+            <header>
+                <h2>Datum und Uhrzeit mit time</h2>
+                <time datetime="2021-08-01">1. August 2021</time>
+            </header>
+            <p>Wir trafen uns an meinem <time datetime="2021-11-12">44. Geburtstag</time> bei <em>Bär</em><time datetime="20:00"> um 8 Uhr am Abend.</time></p>
+            <p>Wir trafen uns an meinem <time datetime="2021-11-12T20:00+00:00">44. Geburtstag</time> bei <em>Bär</em> um 8 Uhr am Abend.</p>
+            <p>Wir trafen uns am <time>2021-11-12</time> bei <em>Bär</em> um <time>20:00</time>.</p>
+            <p>An jedem <time datetime="11-12">Geburtstag</time> habe ich Blumen bekommen.</p>
+            <p>Das Konzert auf dem Foto wurde irgendwann im <time datetime="2021-08">August</time> in diesem Jahr aufgenommen.</p>
+            <p>Das Rockfestival hat <time datetime="P3D">3 Tage</time> gedauert.</p>
+        </article>
+        <article>
+            <header>
+                <h2>Kleingedrucktes mit small</h2>
+                <small>&copy; Max Mustermann; <time datetime="2021-01-01">1. Januar 2021</time></small>
+            </header>
+            <p>Die Sendung kann in <time datetime="P2D">2 Tagen</time> zugestellt werden. <small>(Aufgrund starker Nachfrage kann es auch länger (+1 Tag) dauern)</small></p>
+        </article>
+        <article>
+            <h2>Die Elemente ruby, rt und rp</h2>
+            <p style="font-size:20pt;"><ruby>
+        LOL<rp> (</rp><rt>Laugh Out Loud</rt><rp>)</rp>
+      </ruby></p>
+            <p><small>Mehr Infos: <a href="http://de.wikipedia.org/wiki/Ruby_Annotation">http://de.wikipedia.org/wiki/Ruby_Annotation</a></small></p>
+        </article>
+        <article>
+            <h2>Das span-Element</h2>
+            <p>Aktuelle Temperatur <span id="temp">18</span> °C</p>
+            <p>Eine Formatierung mit <span style="text-decoration:overline; color:grey;">CSS</span> und dem span-Element</p>
+        </article>
+    </main>
+    <footer>
+        <a href="#">Rechtliches</a> |
+        <a href="#">Impressum</a> |
+        <a href="#">AGB</a> |
+        <a href="#">Über mich</a>
+    </footer>
+</body>
+
+</html>

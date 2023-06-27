@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML-Formular</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <h1>Ein einfacher Form-Mailer</h1>
+    <form id="myForm" method="post" action="form-mail.php">
+        <fieldset>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Ihr Name" required />
+                <label id="error1"></label>
+            </div>
+            <div>
+                <label for="mail">E-Mail:</label>
+                <input type="email" name="mail" id="mail" placeholder="E-Mail-Adresse" required />
+                <label for="mail" id="error2"></label>
+            </div>
+            <div>
+                <label for="nachricht">Ihre Nachricht:</label>
+                <textarea name="nachricht" id="nachricht" placeholder="Hier Nachricht eingeben ..." rows="8" required></textarea>
+                <label for="nachricht" id="error3"></label>
+            </div>
+            <div>
+                <input name="absenden" type="submit" value="Absenden" />
+                <input name="Reset" type="reset" value="Zurücksetzen" />
+            </div>
+            <br />
+            <div>
+                <label for="dsgvo" id="error4">DSGVO-Einverständnis:</label>
+                <input type="checkbox" id="dsgvo" name="dsgvo" required />
+                <label>Diese Website darf die übermittelten Informationen zur Beantwortung
+            meiner Anfrage speichern. (<a href="#" target="_blank"
+              >Datenschutzerklärung</a
+            >).</label
+          >
+        </div>
+      </fieldset>
+    </form>
+
+    <script src="myscript.js"></script>
+  </body>
+</html>
